@@ -81,7 +81,8 @@ extension ThemesVC:UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
        
-
+ 
+      
         if UserDefaults.standard.bool(forKey: "pro") {
         
         let cell = tableView.cellForRow(at: indexPath) as! Theme
