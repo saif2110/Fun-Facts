@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Bold.ttf">
+            <string>Montserrat-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Welcome" customModule="Fun_Facts" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="welcome" destination="rcm-dH-iMK" id="xQS-BN-xgD"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rcm-dH-iMK">
+                    <rect key="frame" x="122" y="74" width="170" height="170"/>
+                    <color key="tintColor" red="0.30319313597834968" green="0.85187475665722023" blue="0.87235604080499385" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="170" id="KSi-vP-8AL"/>
+                        <constraint firstAttribute="height" constant="170" id="t4H-TF-Bpp"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="swL-f3-3DN">
+                    <rect key="frame" x="30" y="244" width="354" height="88"/>
+                    <color key="tintColor" red="0.30319313597834968" green="0.85187475665722023" blue="0.87235604080499385" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <string key="text">Welcome to
+Daily Fun Facts</string>
+                    <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="36"/>
+                    <color key="textColor" red="0.30196078431372547" green="0.85098039215686272" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Jcz-N3-iCk">
+                    <rect key="frame" x="30" y="362" width="354" height="61.5"/>
+                    <attributedString key="attributedText">
+                        <fragment>
+                            <string key="content">Looking for Interesting and Amazing facts ?
+</string>
+                            <attributes>
+                                <color key="NSColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <font key="NSFont" size="13" name="Arial-BoldMT"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                        <fragment>
+                            <string key="content">
+Enjoy the largest collection of facts 11000+ on your phone
+Daily Interesting, Informative and Weird Random Facts</string>
+                            <attributes>
+                                <color key="NSColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <font key="NSFont" metaFont="system"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zhm-JT-XEf">
+                    <rect key="frame" x="20" y="792" width="374" height="50"/>
+                    <color key="backgroundColor" red="0.30319313599999997" green="0.85187475670000001" blue="0.87235604079999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="zMT-vO-x9u"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="19"/>
+                    <state key="normal" title="NEXT">
+                        <color key="titleColor" systemColor="systemGray6Color"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="nextAction:" destination="-1" eventType="touchUpInside" id="4iH-Cq-5ca"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Jcz-N3-iCk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="19C-bD-mRy"/>
+                <constraint firstItem="swL-f3-3DN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="2CM-52-MFl"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Zhm-JT-XEf" secondAttribute="trailing" constant="20" id="Alu-nB-rbY"/>
+                <constraint firstItem="Zhm-JT-XEf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="EJV-qu-DaX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="swL-f3-3DN" secondAttribute="trailing" constant="30" id="SrL-fG-dmQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Jcz-N3-iCk" secondAttribute="trailing" constant="30" id="Xyg-SL-Usf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Zhm-JT-XEf" secondAttribute="bottom" constant="20" id="aOy-KH-8Rm"/>
+                <constraint firstItem="rcm-dH-iMK" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="aTr-Wp-jl1"/>
+                <constraint firstItem="rcm-dH-iMK" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="cXa-aS-zTv"/>
+                <constraint firstItem="Jcz-N3-iCk" firstAttribute="top" secondItem="swL-f3-3DN" secondAttribute="bottom" constant="30" id="gt9-JZ-dlZ"/>
+                <constraint firstItem="swL-f3-3DN" firstAttribute="top" secondItem="rcm-dH-iMK" secondAttribute="bottom" id="xFr-tm-6gZ"/>
+            </constraints>
+            <point key="canvasLocation" x="111.59420289855073" y="108.48214285714285"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
