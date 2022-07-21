@@ -124,7 +124,7 @@ extension ThemesVC:UITableViewDelegate,UITableViewDataSource {
             
         }else{
             
-            present(InAppVC(), animated: true, completion: nil)
+            present(InAppPurchases(), animated: true, completion: nil)
             
         }
     }

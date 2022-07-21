@@ -28,13 +28,11 @@
 		5C5089B2264E8AA8009B66D1 /* PhotoSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5089A4264E8AA8009B66D1 /* PhotoSearch.swift */; };
 		5C5089B3264E8AA8009B66D1 /* swipeViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5089A5264E8AA8009B66D1 /* swipeViewVC.swift */; };
 		5C5089B4264E8AA8009B66D1 /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5089A6264E8AA8009B66D1 /* Welcome.swift */; };
-		5C5089B5264E8AA8009B66D1 /* InAppVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C5089A7264E8AA8009B66D1 /* InAppVC.xib */; };
 		5C5089B6264E8AA8009B66D1 /* selectFontVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C5089A8264E8AA8009B66D1 /* selectFontVC.xib */; };
 		5C5089B7264E8AA8009B66D1 /* swipeViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C5089A9264E8AA8009B66D1 /* swipeViewVC.xib */; };
 		5C5089B8264E8AA8009B66D1 /* Welcome.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C5089AA264E8AA8009B66D1 /* Welcome.xib */; };
 		5C5089B9264E8AA8009B66D1 /* TypeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C5089AB264E8AA8009B66D1 /* TypeVC.xib */; };
 		5C5089BA264E8AA8009B66D1 /* TypeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5089AC264E8AA8009B66D1 /* TypeVC.swift */; };
-		5C5089BB264E8AA8009B66D1 /* InAppVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5089AD264E8AA8009B66D1 /* InAppVC.swift */; };
 		5C5089BC264E8AA8009B66D1 /* GalleryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5089AE264E8AA8009B66D1 /* GalleryVC.swift */; };
 		5C5089BD264E8AA8009B66D1 /* selectFontVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5089AF264E8AA8009B66D1 /* selectFontVC.swift */; };
 		5C5089BF264E8AC6009B66D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C5089BE264E8AC6009B66D1 /* LaunchScreen.storyboard */; };
@@ -52,6 +50,9 @@
 		5C95ADF0264FE95B001DE4E9 /* pro.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C95ADEF264FE95B001DE4E9 /* pro.json */; };
 		5C97853A26503E5800BFD733 /* 180.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C97853926503E5800BFD733 /* 180.png */; };
 		68D16A00E6E976F91E9FF95C /* Pods_WidExtensionExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0E9C37B010FF6F813570C3F /* Pods_WidExtensionExtension.framework */; };
+		B010B61728899EC000FF7E3B /* InAppPurchases.swift in Sources */ = {isa = PBXBuildFile; fileRef = B010B61528899EC000FF7E3B /* InAppPurchases.swift */; };
+		B010B61828899EC000FF7E3B /* InAppPurchases.xib in Resources */ = {isa = PBXBuildFile; fileRef = B010B61628899EC000FF7E3B /* InAppPurchases.xib */; };
+		B010B61A2889D19C00FF7E3B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B010B6192889D19C00FF7E3B /* StoreKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,13 +103,11 @@
 		5C5089A4264E8AA8009B66D1 /* PhotoSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoSearch.swift; sourceTree = "<group>"; };
 		5C5089A5264E8AA8009B66D1 /* swipeViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = swipeViewVC.swift; sourceTree = "<group>"; };
 		5C5089A6264E8AA8009B66D1 /* Welcome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
-		5C5089A7264E8AA8009B66D1 /* InAppVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InAppVC.xib; sourceTree = "<group>"; };
 		5C5089A8264E8AA8009B66D1 /* selectFontVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = selectFontVC.xib; sourceTree = "<group>"; };
 		5C5089A9264E8AA8009B66D1 /* swipeViewVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = swipeViewVC.xib; sourceTree = "<group>"; };
 		5C5089AA264E8AA8009B66D1 /* Welcome.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Welcome.xib; sourceTree = "<group>"; };
 		5C5089AB264E8AA8009B66D1 /* TypeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TypeVC.xib; sourceTree = "<group>"; };
 		5C5089AC264E8AA8009B66D1 /* TypeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeVC.swift; sourceTree = "<group>"; };
-		5C5089AD264E8AA8009B66D1 /* InAppVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InAppVC.swift; sourceTree = "<group>"; };
 		5C5089AE264E8AA8009B66D1 /* GalleryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryVC.swift; sourceTree = "<group>"; };
 		5C5089AF264E8AA8009B66D1 /* selectFontVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = selectFontVC.swift; sourceTree = "<group>"; };
 		5C5089BE264E8AC6009B66D1 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -126,6 +125,9 @@
 		643C2204BCE7E677F884AC88 /* Pods-WidExtensionExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WidExtensionExtension.debug.xcconfig"; path = "Target Support Files/Pods-WidExtensionExtension/Pods-WidExtensionExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		78863B153717DF68C4A747E4 /* Pods-WidExtensionExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WidExtensionExtension.release.xcconfig"; path = "Target Support Files/Pods-WidExtensionExtension/Pods-WidExtensionExtension.release.xcconfig"; sourceTree = "<group>"; };
 		9B706C4ABC82BA8864384DA4 /* Pods_Fun_Facts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fun_Facts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B010B61528899EC000FF7E3B /* InAppPurchases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InAppPurchases.swift; sourceTree = "<group>"; };
+		B010B61628899EC000FF7E3B /* InAppPurchases.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InAppPurchases.xib; sourceTree = "<group>"; };
+		B010B6192889D19C00FF7E3B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		B0E9C37B010FF6F813570C3F /* Pods_WidExtensionExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WidExtensionExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E22E8173925EC04B16245DEA /* Pods-Fun Facts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fun Facts.debug.xcconfig"; path = "Target Support Files/Pods-Fun Facts/Pods-Fun Facts.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -136,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01FEFD6C34807B34211ABD14 /* Pods_Fun_Facts.framework in Frameworks */,
+				B010B61A2889D19C00FF7E3B /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +179,7 @@
 		5C508967264E81B8009B66D1 /* Fun Facts */ = {
 			isa = PBXGroup;
 			children = (
+				B010B61428899EC000FF7E3B /* InApp */,
 				5C39849026503483006AEC07 /* Fun Facts.entitlements */,
 				5C95ADEF264FE95B001DE4E9 /* pro.json */,
 				5C95ADE3264FC2FF001DE4E9 /* left.json */,
@@ -197,6 +201,7 @@
 		5C508981264E81FB009B66D1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B010B6192889D19C00FF7E3B /* StoreKit.framework */,
 				5C508982264E81FB009B66D1 /* WidgetKit.framework */,
 				5C508984264E81FB009B66D1 /* SwiftUI.framework */,
 				9B706C4ABC82BA8864384DA4 /* Pods_Fun_Facts.framework */,
@@ -241,8 +246,6 @@
 				5C5089AA264E8AA8009B66D1 /* Welcome.xib */,
 				5C5089AB264E8AA8009B66D1 /* TypeVC.xib */,
 				5C5089AC264E8AA8009B66D1 /* TypeVC.swift */,
-				5C5089A7264E8AA8009B66D1 /* InAppVC.xib */,
-				5C5089AD264E8AA8009B66D1 /* InAppVC.swift */,
 				5C5089A8264E8AA8009B66D1 /* selectFontVC.xib */,
 				5C5089AF264E8AA8009B66D1 /* selectFontVC.swift */,
 			);
@@ -271,6 +274,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		B010B61428899EC000FF7E3B /* InApp */ = {
+			isa = PBXGroup;
+			children = (
+				B010B61528899EC000FF7E3B /* InAppPurchases.swift */,
+				B010B61628899EC000FF7E3B /* InAppPurchases.xib */,
+			);
+			path = InApp;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -284,7 +296,6 @@
 				5C508963264E81B8009B66D1 /* Resources */,
 				5C508995264E81FD009B66D1 /* Embed App Extensions */,
 				26D3C67C86936974C5FD0838 /* [CP] Embed Pods Frameworks */,
-				74B238E45E8F333D33DC2880 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -357,8 +368,8 @@
 			files = (
 				5C5089CF264E8E26009B66D1 /* Montserrat-Bold.ttf in Resources */,
 				5C5089B8264E8AA8009B66D1 /* Welcome.xib in Resources */,
+				B010B61828899EC000FF7E3B /* InAppPurchases.xib in Resources */,
 				5C5089BF264E8AC6009B66D1 /* LaunchScreen.storyboard in Resources */,
-				5C5089B5264E8AA8009B66D1 /* InAppVC.xib in Resources */,
 				5C95ADF0264FE95B001DE4E9 /* pro.json in Resources */,
 				5C5089CD264E8C2C009B66D1 /* selectType.xib in Resources */,
 				5C5089C1264E8AD1009B66D1 /* Main.storyboard in Resources */,
@@ -400,23 +411,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Fun Facts/Pods-Fun Facts-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		74B238E45E8F333D33DC2880 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Fun Facts/Pods-Fun Facts-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Fun Facts/Pods-Fun Facts-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Fun Facts/Pods-Fun Facts-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DA1BFBB591C15FA7F95D6437 /* [CP] Check Pods Manifest.lock */ = {
@@ -475,7 +469,7 @@
 				5C5089BD264E8AA8009B66D1 /* selectFontVC.swift in Sources */,
 				5C50899E264E8A7F009B66D1 /* Api.swift in Sources */,
 				5C50899D264E8A7F009B66D1 /* imageLoadSave.swift in Sources */,
-				5C5089BB264E8AA8009B66D1 /* InAppVC.swift in Sources */,
+				B010B61728899EC000FF7E3B /* InAppPurchases.swift in Sources */,
 				5C5089BC264E8AA8009B66D1 /* GalleryVC.swift in Sources */,
 				5C5089B2264E8AA8009B66D1 /* PhotoSearch.swift in Sources */,
 				5C50899C264E8A7F009B66D1 /* Ads.swift in Sources */,

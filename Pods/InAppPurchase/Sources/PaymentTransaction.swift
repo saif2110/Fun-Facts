@@ -6,28 +6,51 @@
 //  Copyright © 2017年 Jin Sasaki. All rights reserved.
 //
 
+import Foundation
 import StoreKit
 
-public typealias TransactionState = SKPaymentTransactionState
+public struct PaymentTransaction {
+    public enum State: Equatable {
+        case purchasing
+        case purchased
+        case failed
+        case restored
+        case deferred
+        case unknown(rawValue: Int)
 
-public protocol PaymentTransaction {
-    var transactionIdentifier: String? { get }
-    var originalTransactionIdentifier: String? { get }
-    var productIdentifier: String { get }
-}
-
-extension Internal {
-    internal struct PaymentTransaction {
-        let transactionIdentifier: String?
-        let originalTransactionIdentifier: String?
-        let productIdentifier: String
+        init(_ skState: SKPaymentTransactionState) {
+            switch skState {
+            case .purchasing: self = .purchasing
+            case .purchased: self = .purchased
+            case .failed: self = .failed
+            case .deferred: self = .deferred
+            case .restored: self = .restored
+            @unknown default: self = .unknown(rawValue: skState.rawValue)
+            }
+        }
     }
-}
-extension Internal.PaymentTransaction: PaymentTransaction {}
-extension Internal.PaymentTransaction {
-    internal init(_ transaction: SKPaymentTransaction) {
-        self.transactionIdentifier = transaction.transactionIdentifier
-        self.originalTransactionIdentifier = transaction.original?.transactionIdentifier
-        self.productIdentifier = transaction.payment.productIdentifier
+    public var transactionIdentifier: String? {
+        skTransaction.transactionIdentifier
+    }
+    public var originalTransactionIdentifier: String? {
+        skTransaction.original?.transactionIdentifier
+    }
+    public var productIdentifier: String {
+        skTransaction.payment.productIdentifier
+    }
+    public var state: State {
+        PaymentTransaction.State(skTransaction.transactionState)
+    }
+    public var original: PaymentTransaction? {
+        guard let original = skTransaction.original else {
+            return nil
+        }
+        return .init(original)
+    }
+
+    internal let skTransaction: SKPaymentTransaction
+
+    public init(_ skTransaction: SKPaymentTransaction) {
+        self.skTransaction = skTransaction
     }
 }

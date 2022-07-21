@@ -6,12 +6,14 @@
 //  Copyright © 2018年 Jin Sasaki. All rights reserved.
 //
 
+import Foundation
 import StoreKit
 
 internal typealias ProductHandler = (_ result: Result<[SKProduct], InAppPurchase.Error>) -> Void
-internal typealias PaymentHandler = (_ queue: SKPaymentQueue, _ result: Result<SKPaymentTransaction, InAppPurchase.Error>) -> Void
+internal typealias PaymentHandler = (_ queue: PaymentQueue, _ result: Result<SKPaymentTransaction, InAppPurchase.Error>) -> Void
 internal typealias RestoreHandler = (_ queue: SKPaymentQueue, _ error: InAppPurchase.Error?) -> Void
 internal typealias ShouldAddStorePaymentHandler = (_ queue: SKPaymentQueue, _ payment: SKPayment, _ product: SKProduct) -> Bool
+internal typealias ReceiptRefreshHandler = (Result<Void, InAppPurchase.Error>) -> Void
 
 internal protocol ProductProvidable {
     func fetch(productIdentifiers: Set<String>, requestId: String, handler: @escaping ProductHandler)
@@ -26,23 +28,35 @@ internal protocol PaymentProvidable {
     func addPaymentHandler(withProductIdentifier: String, handler: @escaping PaymentHandler)
     func set(shouldAddStorePaymentHandler: @escaping ShouldAddStorePaymentHandler)
     func set(fallbackHandler: @escaping PaymentHandler)
+    func finish(transaction: PaymentTransaction)
+    var transactions: [PaymentTransaction] { get }
 }
+
+internal protocol ReceiptRefreshProvidable {
+    func refresh(requestId: String, handler: @escaping ReceiptRefreshHandler)
+}
+
 extension InAppPurchase.Error {
-    internal init(error: Swift.Error?) {
+    internal init(transaction: SKPaymentTransaction? = nil, error: Error? = nil) {
+        let error = transaction?.error ?? error
+        var paymentTransaction: PaymentTransaction?
+        if let transaction = transaction {
+            paymentTransaction = .init(transaction)
+        }
         switch (error as? SKError)?.code {
         case .paymentNotAllowed?:
-            self = .paymentNotAllowed
+            self = .init(code: .paymentNotAllowed, transaction: paymentTransaction)
         case .paymentCancelled?:
-            self = .paymentCancelled
+            self = .init(code: .paymentCancelled, transaction: paymentTransaction)
         case .storeProductNotAvailable?:
-            self = .storeProductNotAvailable
+            self = .init(code: .storeProductNotAvailable, transaction: paymentTransaction)
         case .unknown?:
-            self = .storeTrouble
+            self = .init(code: .storeTrouble, transaction: paymentTransaction)
         default:
             if let error = error {
-                self = .with(error: error)
+                self = .init(code: .with(error: error), transaction: paymentTransaction)
             } else {
-                self = .unknown
+                self = .init(code: .unknown, transaction: paymentTransaction)
             }
         }
     }
@@ -68,13 +82,13 @@ extension InAppPurchase {
             // Do nothing
             break
         case .purchased:
-            handler?(.success(.init(state: .purchased, transaction: Internal.PaymentTransaction(transaction))))
+            handler?(.success(Internal.PaymentResponse(state: .purchased, transaction: PaymentTransaction(transaction))))
         case .restored:
-            handler?(.success(.init(state: .restored, transaction: Internal.PaymentTransaction(transaction))))
+            handler?(.success(Internal.PaymentResponse(state: .restored, transaction: PaymentTransaction(transaction))))
         case .deferred:
-            handler?(.success(.init(state: .deferred, transaction: Internal.PaymentTransaction(transaction))))
+            handler?(.success(Internal.PaymentResponse(state: .deferred, transaction: PaymentTransaction(transaction))))
         case .failed:
-            handler?(.failure(InAppPurchase.Error(error: transaction.error)))
+            handler?(.failure(InAppPurchase.Error(transaction: transaction, error: nil)))
         @unknown default:
             // Do nothing
             break

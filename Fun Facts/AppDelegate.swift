@@ -9,6 +9,7 @@ import UIKit
 import WidgetKit
 import GoogleMobileAds
 import InAppPurchase
+import Purchases
 
 
 let tintColor2 = #colorLiteral(red: 0.4919828773, green: 0.9111565948, blue: 0.5098821521, alpha: 1)
@@ -34,7 +35,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
             //print("what the hell is this")
         })
-        
+      
+      Purchases.debugLogsEnabled = true
+      Purchases.configure(withAPIKey: "appl_ozycjglBHBHaaReiTiXorPQszMg")
+      isSubsActive()
+      
+      
         UserDefaults.standard.timeappOpenSet(value: UserDefaults.standard.timeappOpen() + 1)
         
         return true
@@ -43,6 +49,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(_ application: UIApplication) {
         WidgetCenter.shared.reloadAllTimelines()
     }
+  
+  
+  
+  func isSubsActive(){
+      
+      Purchases.shared.purchaserInfo { (purchaserInfo, error) in
+          
+          if purchaserInfo?.entitlements.all[IPA.OneWeekPro.rawValue]?.isActive == true ||
+              purchaserInfo?.entitlements.all[IPA.OneYearPro.rawValue]?.isActive == true  {
+              
+            UserDefaults.standard.setValue(true , forKeyPath: "pro")
+            UserDefaults(suiteName:
+                            "group.Widinfo")!.set(true, forKey: "pro")
+              
+          }else{
+              
+            UserDefaults.standard.setValue(false , forKeyPath: "pro")
+            UserDefaults(suiteName:
+                            "group.Widinfo")!.set(false, forKey: "pro")
+
+          }
+      }
+  }
+  
+  
     
 }
 

@@ -10,7 +10,6 @@ import Alamofire
 import StoreKit
 import InAppPurchase
 import SwiftyJSON
-import HyperSnapSDK
 
 class GalleryVC: UIViewController {
     
@@ -30,7 +29,6 @@ class GalleryVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         pro.shakeAnimation()
-        
         
         
         if !Connectivity.isConnectedToInternet {
@@ -72,7 +70,17 @@ class GalleryVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+      if UserDefaults.standard.timeappOpen() != 1 {
+      if !UserDefaults.standard.bool(forKey: "pro") {
+        DispatchQueue.main.async {
+          let vc = InAppPurchases()
+          vc.modalPresentationStyle = .overFullScreen
+          self.present(vc, animated: false, completion: nil)
+          //self.present(InAppPurchases(), animated: true, completion: nil)
+          }
+        }
+      }
+      
         let iap = InAppPurchase.default
         iap.set(shouldAddStorePaymentHandler: { (product) -> Bool in
             return true
@@ -229,7 +237,7 @@ class GalleryVC: UIViewController {
     
     
     @IBAction func pro(_ sender: Any) {
-        present(InAppVC(), animated: true, completion: nil)
+        present(InAppPurchases(), animated: true, completion: nil)
     }
     
     var leftswiped = 0
@@ -253,11 +261,11 @@ class GalleryVC: UIViewController {
                 showAds(Myself: self)
             }
             
-            if leftswiped == 3 {
-                if let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
-                    SKStoreReviewController.requestReview(in: scene)
-                }
-            }
+//            if leftswiped == 3 {
+//                if let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
+//                    SKStoreReviewController.requestReview(in: scene)
+//                }
+//            }
             
             UIView.animate(withDuration: 0.6, delay: 0.0, options: .curveEaseInOut, animations: {
                 self.label.transform = CGAffineTransform(translationX: self.label.bounds.origin.x - 500, y: self.label.bounds.origin.y)

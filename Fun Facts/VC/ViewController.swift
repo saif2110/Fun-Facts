@@ -156,15 +156,13 @@ class ViewController: UIViewController {
     var pickerController = UIImagePickerController()
     @IBAction func bgImage(_ sender: Any) {
         
-
-        
         if UserDefaults.standard.bool(forKey: "pro"){
             pickerController.delegate = self
             pickerController.allowsEditing = false
             pickerController.sourceType = .photoLibrary
             self.present(pickerController, animated: true)
         }else{
-            present(InAppVC(), animated: true, completion: nil)
+            present(InAppPurchases(), animated: true, completion: nil)
         }
     }
     
@@ -284,3 +282,4 @@ extension ViewController:UIImagePickerControllerDelegate,UINavigationControllerD
     }
     
 }
+

@@ -145,10 +145,12 @@ class TypeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
                         topController = presentedViewController
                     }
                     
-                    let vc = swipeViewVC()
+                    let vc = InAppPurchases()
                     vc.modalPresentationStyle = .overFullScreen
                     topController.present(vc, animated: false, completion: nil)
                     
+                  //topController.present(InAppPurchases(), animated: true, completion: nil)
+                  
                 }
             }
             

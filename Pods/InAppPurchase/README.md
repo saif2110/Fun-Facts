@@ -113,13 +113,80 @@ iap.purchase(productIdentifier: "PRODUCT_ID", handler: { (result) in
     // This handler is called if the payment purchased, restored, deferred or failed.
 
     switch result {
-    case .success(let state):
-        // Handle `InAppPurchase.PaymentState`
+    case .success(let response):
+        // Handle `PaymentResponse`
     case .failure(let error):
         // Handle `InAppPurchase.Error`
     }
 })
 ```
+
+### Transaction handling
+If you want to handle the timing to complete transaction, set `shouldCompleteImmediately` to `false` at initializing.
+
+
+```swift
+let iap = InAppPurchase(shouldCompleteImmediately: false)
+iap.purchase(productIdentifier: "PRODUCT_ID", handler: { (result) in
+    // This handler is called if the payment purchased, restored, deferred or failed.
+
+    switch result {
+    case .success(let response):
+        // Handle `PaymentResponse`
+        // MUST: InAppPurchase does not complete transaction, if purchased, restored. Your app must call `InAppPurchase.finish(transaction:)`.
+        if response.state == .purchased || response.state == .restored {
+            iap.finish(transaction: response.transaction)
+        }
+    case .failure(let error):
+        // Handle `InAppPurchase.Error`
+    }
+})
+
+```
+
+### Multiple instances of InAppPurchase
+If you want to use multiple InAppPurchase, make each instance.  
+**However, be careful the fallback handling because of duplicate handlings.**
+
+This is duplicate handling example:
+
+```swift
+let iap1 = InAppPurchase.default
+let iap2 = InAppPurchase(shouldCompleteImmediately: false)
+iap1.addTransactionObserver(fallbackHandler: {
+    // NOT CALLED
+    // This fallback handler is NOT called because the purchase handler is used.
+})
+iap2.addTransactionObserver(fallbackHandler: {
+    // CALLED
+    // This fallback handler is called because the purchase handler is not associated to iap2.
+})
+iap1.purchase(productIdentifier: "your.purchase.item1", handler: { (result) in
+    // CALLED
+})
+
+```
+
+To avoid this situation, I recommend to **specify product IDs for each instance**.
+
+```swift
+let iap1 = InAppPurchase(shouldCompleteImmediately: true, productIds: ["your.purchase.item1", "your.purchase.item2"])
+let iap2 = InAppPurchase(shouldCompleteImmediately: false, productIds: ["your.purchase.item3", "your.purchase.item4"])
+iap1.addTransactionObserver(fallbackHandler: {
+    // NOT CALLED
+    // This fallback handler is NOT called because the purchase handler is used.
+})
+iap2.addTransactionObserver(fallbackHandler: {
+    // NOT CALLED
+    // This fallback handler is NOT called because "your.purchase.item1" is not specified for iap2.
+})
+iap1.purchase(productIdentifier: "your.purchase.item1", handler: { (result) in
+    // CALLED
+})
+
+```
+
+In addition, if you do not specify `productIds` or set `productIds: nil`, the iap instance allow all product ids.
 
 ## For Dependency Injection
 
@@ -174,26 +241,14 @@ final class PurchaseService {
 }
 ```
 
-And then you can test `PurchaseService` easily.
+And then you can test `PurchaseService` easily with `InAppPurchaseStubs.framework`.
 
 ```swift
 // PurchaseServiceTests.swift
 
 import XCTest
 @testable import YourApp
-
-// Stub
-final class StubInAppPurchase: InAppPurchaseProvidable {
-    private let _purchaseHandler: ((_ productIdentifier: String, _ handler: InAppPurchase.PurchaseHandler?) -> Void)?
-
-    init(purchaseHandler: ((_ productIdentifier: String, _ handler: InAppPurchase.PurchaseHandler?) -> Void)? = nil) {
-        self._purchaseHandler = purchaseHandler
-    }
-
-    func purchase(productIdentifier: String, handler: InAppPurchase.PurchaseHandler?) {
-        _purchaseHandler?(productIdentifier, handler)
-    }
-}
+import InAppPurchaseStubs
 
 // Test
 final class PurchaseServiceTests: XCTestCase {
@@ -213,7 +268,7 @@ final class PurchaseServiceTests: XCTestCase {
 }
 ```
 
-If you want more information for test, see also [Stubs](./Tests/Stubs/) and [Tests](./Tests/).
+If you want more information for test, see also [InAppPurchaseStubs](./InAppPurchaseStubs/Stubs/) and [Tests](./Tests/).
 
 ## Requirements
 

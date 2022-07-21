@@ -1,4 +1,4 @@
-# Uncomment the next line to define a global platform for your project
+# Uncomment zAthe next line to define a global platform for your project
 # platform :ios, '9.0'
 
 target 'Fun Facts' do
@@ -9,10 +9,11 @@ target 'Fun Facts' do
 pod 'Alamofire'
 pod 'SwiftyJSON'
 pod 'CropViewController'
-pod 'Kingfisher', '~> 6.3'
+pod 'Kingfisher'
 pod 'Google-Mobile-Ads-SDK'
 pod 'lottie-ios'
 pod 'InAppPurchase'
+pod 'Purchases'
 end
 
   target 'WidExtensionExtension' do

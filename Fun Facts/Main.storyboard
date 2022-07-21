@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qzA-Om-GZ9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qzA-Om-GZ9">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -224,7 +225,7 @@
                                 <color key="backgroundColor" red="0.12939649819999999" green="0.12942153219999999" blue="0.12939104439999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Theme" rowHeight="200" id="VxV-A3-w4Q" customClass="Theme" customModule="Fun_Facts" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.333333969116211" width="375" height="200"/>
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="375" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VxV-A3-w4Q" id="KD0-yG-i3L">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
@@ -316,9 +317,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MEH-SX-9ti">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k1g-Tg-i4C">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="k1g-Tg-i4C">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <gestureRecognizers/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Think, Belive, Dream, and Dare." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rq0-tp-tJd">
@@ -330,8 +330,12 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.058740653099999998" green="0.13772806530000001" blue="0.26640048620000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="k1g-Tg-i4C" firstAttribute="leading" secondItem="MEH-SX-9ti" secondAttribute="leading" id="3qv-4E-Z1H"/>
+                                    <constraint firstAttribute="trailing" secondItem="k1g-Tg-i4C" secondAttribute="trailing" id="44W-bf-JHK"/>
                                     <constraint firstItem="rq0-tp-tJd" firstAttribute="centerY" secondItem="MEH-SX-9ti" secondAttribute="centerY" id="H41-sY-lPm"/>
                                     <constraint firstItem="rq0-tp-tJd" firstAttribute="leading" secondItem="MEH-SX-9ti" secondAttribute="leading" constant="30" id="Kg6-H1-ymz"/>
+                                    <constraint firstItem="k1g-Tg-i4C" firstAttribute="top" secondItem="MEH-SX-9ti" secondAttribute="top" id="P2R-gR-JxP"/>
+                                    <constraint firstAttribute="bottom" secondItem="k1g-Tg-i4C" secondAttribute="bottom" id="gXO-Wg-hNI"/>
                                     <constraint firstItem="rq0-tp-tJd" firstAttribute="centerX" secondItem="MEH-SX-9ti" secondAttribute="centerX" id="hj8-0G-9ea"/>
                                     <constraint firstAttribute="trailing" secondItem="rq0-tp-tJd" secondAttribute="trailing" constant="30" id="ozD-XO-UfE"/>
                                 </constraints>
@@ -521,7 +525,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2RS-eC-C7y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="48.799999999999997" y="-256.4039408866995"/>
+            <point key="canvasLocation" x="25" y="-256"/>
         </scene>
         <!--Photo Search-->
         <scene sceneID="rfy-BV-ejj">
