@@ -10,6 +10,7 @@ import WidgetKit
 import GoogleMobileAds
 import InAppPurchase
 import Purchases
+import FirebaseCore
 
 
 let tintColor2 = #colorLiteral(red: 0.4919828773, green: 0.9111565948, blue: 0.5098821521, alpha: 1)
@@ -36,13 +37,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             //print("what the hell is this")
         })
       
-      Purchases.debugLogsEnabled = true
+      Purchases.debugLogsEnabled = false
       Purchases.configure(withAPIKey: "appl_ozycjglBHBHaaReiTiXorPQszMg")
       isSubsActive()
       
       
         UserDefaults.standard.timeappOpenSet(value: UserDefaults.standard.timeappOpen() + 1)
         
+      FirebaseApp.configure()
         return true
     }
 

@@ -8,6 +8,7 @@
 import UIKit
 import SwiftyJSON
 import Alamofire
+import AppTrackingTransparency
 
 class TypeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
@@ -103,7 +104,11 @@ class TypeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //self.isModalInPresentation = true
+       
+      ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in
+        
+      })
+      
         
         getStartedOutlet.isEnabled = false
         getStartedOutlet.backgroundColor = tintColor.withAlphaComponent(0.3)
@@ -145,11 +150,9 @@ class TypeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
                         topController = presentedViewController
                     }
                     
-                    let vc = InAppPurchases()
-                    vc.modalPresentationStyle = .overFullScreen
-                    topController.present(vc, animated: false, completion: nil)
-                    
-                  //topController.present(InAppPurchases(), animated: true, completion: nil)
+                  let vc = InAppViewController()
+                  vc.modalPresentationStyle = .fullScreen
+                  topController.present(vc, animated: true, completion: nil)
                   
                 }
             }

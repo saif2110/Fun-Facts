@@ -125,7 +125,9 @@ extension ThemesVC:UITableViewDelegate,UITableViewDataSource {
             
         }else{
             
-            present(InAppPurchases(), animated: true, completion: nil)
+          let vc = InAppViewController()
+          vc.modalPresentationStyle = .fullScreen
+          present(vc, animated: true, completion: nil)
             
         }
     }

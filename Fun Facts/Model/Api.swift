@@ -17,6 +17,7 @@ func postWithParameter(Url:String,parameters:Parameters,completionhandler:@escap
     let header : HTTPHeaders = ["Content-Type":"application/json"]//,"Token":(UserDefaults.standard.getToken())
     AF.request(url,method:.post,parameters:parameters,encoding: JSONEncoding.default,headers:header).responseJSON {
         response in
+      
         switch(response.result){
         case .success(_:):
             completionhandler(JSON(response.data!), nil)

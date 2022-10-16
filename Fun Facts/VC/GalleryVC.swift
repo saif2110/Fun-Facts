@@ -70,13 +70,16 @@ class GalleryVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+      
       if UserDefaults.standard.timeappOpen() != 1 {
       if !UserDefaults.standard.bool(forKey: "pro") {
+     
         DispatchQueue.main.async {
-          let vc = InAppPurchases()
-          vc.modalPresentationStyle = .overFullScreen
+
+          let vc = InAppViewController()
+          vc.modalPresentationStyle = .fullScreen
           self.present(vc, animated: false, completion: nil)
-          //self.present(InAppPurchases(), animated: true, completion: nil)
+         
           }
         }
       }
@@ -142,7 +145,7 @@ class GalleryVC: UIViewController {
     func hitAPI(){
         leftswiped = 0
         arrayofQuotes.removeAll()
-        startIndicator(selfo: self, UIView: self.view)
+       // startIndicator(selfo: self, UIView: self.view)
         let type = UserDefaults(suiteName: "group.Widinfo")!.object(forKey: "type") as? Array ?? ["random"]
         
         postWithParameter(Url: "facts.php", parameters: ["type":type,"by":true]) { (JSON, Err) in
@@ -164,13 +167,16 @@ class GalleryVC: UIViewController {
                     
                 }
                 
-                stopIndicator()
+    
                 
                 self.setLabel(quote: self.arrayofQuotes[0])
                 
                 
             }
+          
+            stopIndicator()
         }
+      
     }
     
     func PerchesedComplte(){
@@ -237,7 +243,9 @@ class GalleryVC: UIViewController {
     
     
     @IBAction func pro(_ sender: Any) {
-        present(InAppPurchases(), animated: true, completion: nil)
+        let vc = InAppViewController()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true, completion: nil)
     }
     
     var leftswiped = 0
