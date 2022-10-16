@@ -12,7 +12,8 @@ import SafariServices
 enum IPA:String {
   case OneWeekPro = "FactsOneYearProNew"
   case OneYearPro = "FactPro"
-} 
+}
+
 
 class InAppViewController: UIViewController {
   @IBOutlet weak var priceLabel: UILabel!
