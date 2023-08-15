@@ -35,7 +35,7 @@ class Welcome: UIViewController {
 
     @IBAction func nextAction(_ sender: Any) {
         UserDefaults.standard.setisWelcomeDone(value: true)
-        self.dismiss(animated: true) {
+        self.dismiss(animated: false) {
             NotificationCenter.default.post(name: NSNotification.Name("TypeVC"), object: nil)
         }
     }

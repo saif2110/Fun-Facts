@@ -58,6 +58,9 @@
 		B0A500612A8B8B0300E111AA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B0A500602A8B8B0300E111AA /* Alamofire */; };
 		B0A500632A8B8B0900E111AA /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = B0A500622A8B8B0900E111AA /* SwiftyJSON */; };
 		B0A500662A8B8CC900E111AA /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = B0A500652A8B8CC900E111AA /* GoogleMobileAds */; };
+		B0A500692A8B8F1F00E111AA /* SuperwallKit in Frameworks */ = {isa = PBXBuildFile; productRef = B0A500682A8B8F1F00E111AA /* SuperwallKit */; };
+		B0A5006D2A8B91B800E111AA /* SelectUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A5006B2A8B91B700E111AA /* SelectUnit.swift */; };
+		B0A5006E2A8B91B800E111AA /* SelectUnit.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0A5006C2A8B91B700E111AA /* SelectUnit.xib */; };
 		B0CE689528D8BE7000C93ED6 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = B0CE689428D8BE7000C93ED6 /* FirebaseAnalytics */; };
 /* End PBXBuildFile section */
 
@@ -133,6 +136,8 @@
 		B010B6192889D19C00FF7E3B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		B08FD14A28FAF92A0007D991 /* InAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppViewController.swift; sourceTree = "<group>"; };
 		B08FD14B28FAF92A0007D991 /* InAppViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InAppViewController.xib; sourceTree = "<group>"; };
+		B0A5006B2A8B91B700E111AA /* SelectUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectUnit.swift; sourceTree = "<group>"; };
+		B0A5006C2A8B91B700E111AA /* SelectUnit.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectUnit.xib; sourceTree = "<group>"; };
 		E22E8173925EC04B16245DEA /* Pods-Fun Facts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fun Facts.debug.xcconfig"; path = "Target Support Files/Pods-Fun Facts/Pods-Fun Facts.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,6 +148,7 @@
 			files = (
 				B06E4CE62A8B75A800DF9DAC /* Kingfisher in Frameworks */,
 				B06E4CEF2A8B878600DF9DAC /* SwiftyJSON in Frameworks */,
+				B0A500692A8B8F1F00E111AA /* SuperwallKit in Frameworks */,
 				B010B61A2889D19C00FF7E3B /* StoreKit.framework in Frameworks */,
 				B06E4CEC2A8B873E00DF9DAC /* Alamofire in Frameworks */,
 				B0A500662A8B8CC900E111AA /* GoogleMobileAds in Frameworks */,
@@ -245,6 +251,7 @@
 		5C5089A1264E8AA8009B66D1 /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				B0A5006A2A8B91B700E111AA /* SelectUnit */,
 				5C5089AE264E8AA8009B66D1 /* GalleryVC.swift */,
 				5C5089A2264E8AA8009B66D1 /* ViewController.swift */,
 				5C5089A3264E8AA8009B66D1 /* ThemesVC.swift */,
@@ -290,6 +297,15 @@
 			path = InApp;
 			sourceTree = "<group>";
 		};
+		B0A5006A2A8B91B700E111AA /* SelectUnit */ = {
+			isa = PBXGroup;
+			children = (
+				B0A5006B2A8B91B700E111AA /* SelectUnit.swift */,
+				B0A5006C2A8B91B700E111AA /* SelectUnit.xib */,
+			);
+			path = SelectUnit;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -316,6 +332,7 @@
 				B06E4CEB2A8B873E00DF9DAC /* Alamofire */,
 				B06E4CEE2A8B878600DF9DAC /* SwiftyJSON */,
 				B0A500652A8B8CC900E111AA /* GoogleMobileAds */,
+				B0A500682A8B8F1F00E111AA /* SuperwallKit */,
 			);
 			productName = "Fun Facts";
 			productReference = 5C508965264E81B8009B66D1 /* Fun Facts.app */;
@@ -375,6 +392,7 @@
 				B06E4CEA2A8B873E00DF9DAC /* XCRemoteSwiftPackageReference "Alamofire" */,
 				B06E4CED2A8B878600DF9DAC /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				B0A500642A8B8CC900E111AA /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
+				B0A500672A8B8F1E00E111AA /* XCRemoteSwiftPackageReference "Superwall-iOS" */,
 			);
 			productRefGroup = 5C508966264E81B8009B66D1 /* Products */;
 			projectDirPath = "";
@@ -406,6 +424,7 @@
 				5C5089D2264EB87D009B66D1 /* welcome.json in Resources */,
 				5C5089B9264E8AA8009B66D1 /* TypeVC.xib in Resources */,
 				B08FD14D28FAF92A0007D991 /* InAppViewController.xib in Resources */,
+				B0A5006E2A8B91B800E111AA /* SelectUnit.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +489,7 @@
 				5C5089B1264E8AA8009B66D1 /* ThemesVC.swift in Sources */,
 				5C5089BA264E8AA8009B66D1 /* TypeVC.swift in Sources */,
 				5C50899F264E8A7F009B66D1 /* myAlert.swift in Sources */,
+				B0A5006D2A8B91B800E111AA /* SelectUnit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -792,6 +812,14 @@
 				minimumVersion = 10.0.0;
 			};
 		};
+		B0A500672A8B8F1E00E111AA /* XCRemoteSwiftPackageReference "Superwall-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/superwall-me/Superwall-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 		B0CE689328D8BE7000C93ED6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -837,6 +865,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B0A500642A8B8CC900E111AA /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
 			productName = GoogleMobileAds;
+		};
+		B0A500682A8B8F1F00E111AA /* SuperwallKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B0A500672A8B8F1E00E111AA /* XCRemoteSwiftPackageReference "Superwall-iOS" */;
+			productName = SuperwallKit;
 		};
 		B0CE689428D8BE7000C93ED6 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;

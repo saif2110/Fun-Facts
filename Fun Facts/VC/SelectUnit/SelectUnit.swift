@@ -6,11 +6,9 @@
 //
 
 import UIKit
-import SwiftyJSON
-import Alamofire
 import AppTrackingTransparency
 
-class TypeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
+class SelectUnit: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         type.count
@@ -18,8 +16,9 @@ class TypeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "selectType", for: indexPath) as! selectType
+      
         
-        cell.typeTXT.text = type[indexPath.item].capitalized
+        cell.typeTXT.text = type[indexPath.item]
         
         
         return cell
@@ -28,7 +27,7 @@ class TypeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let flowayout = collectionViewLayout as? UICollectionViewFlowLayout
         let space: CGFloat = (flowayout?.minimumInteritemSpacing ?? 0.0) + (flowayout?.sectionInset.left ?? 0.0) + (flowayout?.sectionInset.right ?? 0.0)
-        let size:CGFloat = (collectionView.frame.size.width - space) / 2.0
+        let size:CGFloat = (collectionView.frame.size.width - space)
         return CGSize(width: size, height: 65)
     }
     
@@ -37,6 +36,8 @@ class TypeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as! selectType
+      
+       
         
         bounce(cell: cell)
         
@@ -48,31 +49,39 @@ class TypeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
     }
     
     func select(cell:selectType) {
+        resetAll()
         cell.typeTXT.textColor = .white
         cell.imageVIew.tintColor = .white
         cell.blueView.backgroundColor = tintColor
         //cell.blueView.layer.borderColor = tintColor.cgColor
         
         selectdType.append(cell.typeTXT.text!)
-        if selectdType.count > 2{
+        if selectdType.count > 0{
             getStartedOutlet.isEnabled = true
-            getStartedOutlet.backgroundColor = tintColor
-            getStartedOutlet.setTitle("GET STARTED", for: .normal)
+            
+           
         }
     }
     
     func deSelect(cell:selectType) {
         cell.typeTXT.textColor = UIColor.white
         cell.imageVIew.tintColor = UIColor.white
-        cell.blueView.backgroundColor = appColor
+        cell.blueView.backgroundColor = #colorLiteral(red: 0.1298420429, green: 0.1298461258, blue: 0.1298439503, alpha: 1)
         //cell.blueView.layer.borderColor = UIColor.white.cgColor
         
         selectdType.removeAll { $0 == cell.typeTXT.text! }
         if selectdType.count < 3{
             getStartedOutlet.isEnabled = false
-            getStartedOutlet.backgroundColor = tintColor.withAlphaComponent(0.3)
-            getStartedOutlet.setTitle("SELECT THREE", for: .normal)
             
+            getStartedOutlet.setTitle("SELECT UNIT", for: .normal)
+            
+        }
+    }
+    
+    func resetAll(){
+        for cellView in collectionView.visibleCells {
+           let cell  = cellView as? selectType
+            deSelect(cell: cell!)
         }
     }
     
@@ -99,66 +108,41 @@ class TypeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var type = [String]()
+    var type = ["Fun","Study","Entertainment","Other"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
-      ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in
-        
-      })
-      
         
         getStartedOutlet.isEnabled = false
-        getStartedOutlet.backgroundColor = tintColor.withAlphaComponent(0.3)
+       
         getStartedOutlet.setTitleColor(UIColor.white, for: .normal)
         
-        getStartedOutlet.setTitle("SELECT THREE", for: .normal)
+        getStartedOutlet.setTitle("CONTINUE", for: .normal)
         
         self.collectionView.register(UINib(nibName: "selectType", bundle: nil), forCellWithReuseIdentifier: "selectType")
         
         
-        startIndicator(selfo: self, UIView: self.collectionView)
-        postWithParameter(Url: "typeFacts.php", parameters: [:]) { (JSON, Err) in
-            
-            for (_,subJson) in JSON["types"]{
-                self.type.append(subJson.string ?? "")
-                stopIndicator()
-            }
-            
-            self.collectionView.delegate = self
-            self.collectionView.dataSource = self
-            self.collectionView.reloadData()
-            
-        }
+        //startIndicator(selfo: self, UIView: self.collectionView)
+        self.collectionView.delegate = self
+        self.collectionView.dataSource = self
+        self.collectionView.reloadData()
     }
     
     @IBAction func getStarted(_ sender: Any) {
         
-        UserDefaults(suiteName:
-                        "group.Widinfo")!.set(type, forKey: "type")
         
-        dismiss(animated: false) {
+        
+        self.dismiss(animated: false) {
             
-            if UserDefaults.standard.timeappOpen() == 1 {
-                
-                let keyWindow = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
-                
-                if var topController = keyWindow?.rootViewController {
-                    while let presentedViewController = topController.presentedViewController {
-                        topController = presentedViewController
-                    }
-                    
-                  let vc = SelectUnit()
-                  vc.modalPresentationStyle = .fullScreen
-                  topController.present(vc, animated: false)
-                
-                  
+            DispatchQueue.main.async {
+                if let topMostViewController = UIApplication.getTopViewController() {
+                    openInappPerchase(context: topMostViewController)
                 }
             }
             
         }
+        
         
         
     }
@@ -166,3 +150,19 @@ class TypeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
 }
 
 
+extension UIApplication {
+
+    class func getTopViewController(base: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
+
+        if let nav = base as? UINavigationController {
+            return getTopViewController(base: nav.visibleViewController)
+
+        } else if let tab = base as? UITabBarController, let selected = tab.selectedViewController {
+            return getTopViewController(base: selected)
+
+        } else if let presented = base?.presentedViewController {
+            return getTopViewController(base: presented)
+        }
+        return base
+    }
+}

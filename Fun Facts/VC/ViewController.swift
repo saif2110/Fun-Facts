@@ -163,9 +163,7 @@ class ViewController: UIViewController {
             pickerController.sourceType = .photoLibrary
             self.present(pickerController, animated: true)
         }else{
-          let vc = InAppViewController()
-          vc.modalPresentationStyle = .fullScreen
-          present(vc, animated: true, completion: nil)
+          openInappPerchase(context: self)
         }
     }
     

@@ -11,6 +11,7 @@ import GoogleMobileAds
 import InAppPurchase
 import Purchases
 import FirebaseCore
+import SuperwallKit
 
 
 let tintColor2 = #colorLiteral(red: 0.4919828773, green: 0.9111565948, blue: 0.5098821521, alpha: 1)
@@ -37,6 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             //print("what the hell is this")
         })
       
+      Superwall.configure(apiKey: "pk_757c2dcd4ac6e45c223a8ccafc0eab87d2c39862a0d2ef2e")
       Purchases.debugLogsEnabled = false
       Purchases.configure(withAPIKey: "appl_ozycjglBHBHaaReiTiXorPQszMg")
       isSubsActive()
@@ -79,3 +81,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
 }
 
+
+func openInappPerchase(context:UIViewController){
+//  let vc = InAppViewController()
+//  vc.modalPresentationStyle = .fullScreen
+//  context.present(vc, animated: false, completion: nil)
+  Superwall.shared.register(event: "campaign_trigger")
+}

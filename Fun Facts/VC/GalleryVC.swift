@@ -76,9 +76,7 @@ class GalleryVC: UIViewController {
      
         DispatchQueue.main.async {
 
-          let vc = InAppViewController()
-          vc.modalPresentationStyle = .fullScreen
-          self.present(vc, animated: false, completion: nil)
+          openInappPerchase(context: self)
          
           }
         }
@@ -243,9 +241,7 @@ class GalleryVC: UIViewController {
     
     
     @IBAction func pro(_ sender: Any) {
-        let vc = InAppViewController()
-        vc.modalPresentationStyle = .fullScreen
-        present(vc, animated: true, completion: nil)
+      openInappPerchase(context: self)
     }
     
     var leftswiped = 0
