@@ -1,4 +1,4 @@
-framework module InAppPurchase {
+module InAppPurchase {
   umbrella header "InAppPurchase-umbrella.h"
 
   export *

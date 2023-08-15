@@ -7,12 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01FEFD6C34807B34211ABD14 /* Pods_Fun_Facts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B706C4ABC82BA8864384DA4 /* Pods_Fun_Facts.framework */; };
 		5C39849226503537006AEC07 /* imageLoadSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C508998264E8A7F009B66D1 /* imageLoadSave.swift */; };
 		5C39849326503550006AEC07 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C508999264E8A7F009B66D1 /* Api.swift */; };
 		5C508969264E81B8009B66D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C508968264E81B8009B66D1 /* AppDelegate.swift */; };
-		5C508983264E81FB009B66D1 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C508982264E81FB009B66D1 /* WidgetKit.framework */; };
-		5C508985264E81FB009B66D1 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C508984264E81FB009B66D1 /* SwiftUI.framework */; };
 		5C508988264E81FB009B66D1 /* WidExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C508987264E81FB009B66D1 /* WidExtension.swift */; };
 		5C50898B264E81FD009B66D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C50898A264E81FD009B66D1 /* Assets.xcassets */; };
 		5C50898D264E81FD009B66D1 /* WidExtension.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 5C508989264E81FB009B66D1 /* WidExtension.intentdefinition */; };
@@ -49,11 +46,18 @@
 		5C95ADE4264FC2FF001DE4E9 /* left.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C95ADE3264FC2FF001DE4E9 /* left.json */; };
 		5C95ADF0264FE95B001DE4E9 /* pro.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C95ADEF264FE95B001DE4E9 /* pro.json */; };
 		5C97853A26503E5800BFD733 /* 180.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C97853926503E5800BFD733 /* 180.png */; };
-		68D16A00E6E976F91E9FF95C /* Pods_WidExtensionExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0E9C37B010FF6F813570C3F /* Pods_WidExtensionExtension.framework */; };
+		6B1A953A57D5B28933290F2C /* libPods-Fun Facts.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EB999259C334C034859C70C /* libPods-Fun Facts.a */; };
 		B003788428FAF22F004ED2E1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B003788328FAF22F004ED2E1 /* GoogleService-Info.plist */; };
 		B010B61A2889D19C00FF7E3B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B010B6192889D19C00FF7E3B /* StoreKit.framework */; };
+		B06E4CE62A8B75A800DF9DAC /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B06E4CE52A8B75A800DF9DAC /* Kingfisher */; };
+		B06E4CE92A8B86D000DF9DAC /* CropViewController in Frameworks */ = {isa = PBXBuildFile; productRef = B06E4CE82A8B86D000DF9DAC /* CropViewController */; };
+		B06E4CEC2A8B873E00DF9DAC /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B06E4CEB2A8B873E00DF9DAC /* Alamofire */; };
+		B06E4CEF2A8B878600DF9DAC /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = B06E4CEE2A8B878600DF9DAC /* SwiftyJSON */; };
 		B08FD14C28FAF92A0007D991 /* InAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08FD14A28FAF92A0007D991 /* InAppViewController.swift */; };
 		B08FD14D28FAF92A0007D991 /* InAppViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B08FD14B28FAF92A0007D991 /* InAppViewController.xib */; };
+		B0A500612A8B8B0300E111AA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B0A500602A8B8B0300E111AA /* Alamofire */; };
+		B0A500632A8B8B0900E111AA /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = B0A500622A8B8B0900E111AA /* SwiftyJSON */; };
+		B0A500662A8B8CC900E111AA /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = B0A500652A8B8CC900E111AA /* GoogleMobileAds */; };
 		B0CE689528D8BE7000C93ED6 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = B0CE689428D8BE7000C93ED6 /* FirebaseAnalytics */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +87,7 @@
 
 /* Begin PBXFileReference section */
 		09C9FB9C2433C68DA3F36204 /* Pods-Fun Facts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fun Facts.release.xcconfig"; path = "Target Support Files/Pods-Fun Facts/Pods-Fun Facts.release.xcconfig"; sourceTree = "<group>"; };
+		0EB999259C334C034859C70C /* libPods-Fun Facts.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Fun Facts.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C39849026503483006AEC07 /* Fun Facts.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Fun Facts.entitlements"; sourceTree = "<group>"; };
 		5C398491265034A3006AEC07 /* WidExtensionExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WidExtensionExtension.entitlements; sourceTree = "<group>"; };
 		5C508965264E81B8009B66D1 /* Fun Facts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fun Facts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,14 +129,10 @@
 		5C95ADE3264FC2FF001DE4E9 /* left.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = left.json; sourceTree = "<group>"; };
 		5C95ADEF264FE95B001DE4E9 /* pro.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pro.json; sourceTree = "<group>"; };
 		5C97853926503E5800BFD733 /* 180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 180.png; sourceTree = "<group>"; };
-		643C2204BCE7E677F884AC88 /* Pods-WidExtensionExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WidExtensionExtension.debug.xcconfig"; path = "Target Support Files/Pods-WidExtensionExtension/Pods-WidExtensionExtension.debug.xcconfig"; sourceTree = "<group>"; };
-		78863B153717DF68C4A747E4 /* Pods-WidExtensionExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WidExtensionExtension.release.xcconfig"; path = "Target Support Files/Pods-WidExtensionExtension/Pods-WidExtensionExtension.release.xcconfig"; sourceTree = "<group>"; };
-		9B706C4ABC82BA8864384DA4 /* Pods_Fun_Facts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fun_Facts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B003788328FAF22F004ED2E1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B010B6192889D19C00FF7E3B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		B08FD14A28FAF92A0007D991 /* InAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppViewController.swift; sourceTree = "<group>"; };
 		B08FD14B28FAF92A0007D991 /* InAppViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InAppViewController.xib; sourceTree = "<group>"; };
-		B0E9C37B010FF6F813570C3F /* Pods_WidExtensionExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WidExtensionExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E22E8173925EC04B16245DEA /* Pods-Fun Facts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fun Facts.debug.xcconfig"; path = "Target Support Files/Pods-Fun Facts/Pods-Fun Facts.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,9 +141,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01FEFD6C34807B34211ABD14 /* Pods_Fun_Facts.framework in Frameworks */,
+				B06E4CE62A8B75A800DF9DAC /* Kingfisher in Frameworks */,
+				B06E4CEF2A8B878600DF9DAC /* SwiftyJSON in Frameworks */,
 				B010B61A2889D19C00FF7E3B /* StoreKit.framework in Frameworks */,
+				B06E4CEC2A8B873E00DF9DAC /* Alamofire in Frameworks */,
+				B0A500662A8B8CC900E111AA /* GoogleMobileAds in Frameworks */,
+				B06E4CE92A8B86D000DF9DAC /* CropViewController in Frameworks */,
 				B0CE689528D8BE7000C93ED6 /* FirebaseAnalytics in Frameworks */,
+				6B1A953A57D5B28933290F2C /* libPods-Fun Facts.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,9 +156,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C508985264E81FB009B66D1 /* SwiftUI.framework in Frameworks */,
-				5C508983264E81FB009B66D1 /* WidgetKit.framework in Frameworks */,
-				68D16A00E6E976F91E9FF95C /* Pods_WidExtensionExtension.framework in Frameworks */,
+				B0A500632A8B8B0900E111AA /* SwiftyJSON in Frameworks */,
+				B0A500612A8B8B0300E111AA /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,8 +214,7 @@
 				B010B6192889D19C00FF7E3B /* StoreKit.framework */,
 				5C508982264E81FB009B66D1 /* WidgetKit.framework */,
 				5C508984264E81FB009B66D1 /* SwiftUI.framework */,
-				9B706C4ABC82BA8864384DA4 /* Pods_Fun_Facts.framework */,
-				B0E9C37B010FF6F813570C3F /* Pods_WidExtensionExtension.framework */,
+				0EB999259C334C034859C70C /* libPods-Fun Facts.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -273,8 +277,6 @@
 			children = (
 				E22E8173925EC04B16245DEA /* Pods-Fun Facts.debug.xcconfig */,
 				09C9FB9C2433C68DA3F36204 /* Pods-Fun Facts.release.xcconfig */,
-				643C2204BCE7E677F884AC88 /* Pods-WidExtensionExtension.debug.xcconfig */,
-				78863B153717DF68C4A747E4 /* Pods-WidExtensionExtension.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -300,7 +302,6 @@
 				5C508962264E81B8009B66D1 /* Frameworks */,
 				5C508963264E81B8009B66D1 /* Resources */,
 				5C508995264E81FD009B66D1 /* Embed Foundation Extensions */,
-				26D3C67C86936974C5FD0838 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -310,6 +311,11 @@
 			name = "Fun Facts";
 			packageProductDependencies = (
 				B0CE689428D8BE7000C93ED6 /* FirebaseAnalytics */,
+				B06E4CE52A8B75A800DF9DAC /* Kingfisher */,
+				B06E4CE82A8B86D000DF9DAC /* CropViewController */,
+				B06E4CEB2A8B873E00DF9DAC /* Alamofire */,
+				B06E4CEE2A8B878600DF9DAC /* SwiftyJSON */,
+				B0A500652A8B8CC900E111AA /* GoogleMobileAds */,
 			);
 			productName = "Fun Facts";
 			productReference = 5C508965264E81B8009B66D1 /* Fun Facts.app */;
@@ -319,7 +325,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5C508992264E81FD009B66D1 /* Build configuration list for PBXNativeTarget "WidExtensionExtension" */;
 			buildPhases = (
-				DA1BFBB591C15FA7F95D6437 /* [CP] Check Pods Manifest.lock */,
 				5C50897C264E81FB009B66D1 /* Sources */,
 				5C50897D264E81FB009B66D1 /* Frameworks */,
 				5C50897E264E81FB009B66D1 /* Resources */,
@@ -329,6 +334,10 @@
 			dependencies = (
 			);
 			name = WidExtensionExtension;
+			packageProductDependencies = (
+				B0A500602A8B8B0300E111AA /* Alamofire */,
+				B0A500622A8B8B0900E111AA /* SwiftyJSON */,
+			);
 			productName = WidExtensionExtension;
 			productReference = 5C508980264E81FB009B66D1 /* WidExtensionExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
@@ -361,6 +370,11 @@
 			mainGroup = 5C50895C264E81B8009B66D1;
 			packageReferences = (
 				B0CE689328D8BE7000C93ED6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				B06E4CE42A8B75A800DF9DAC /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				B06E4CE72A8B86D000DF9DAC /* XCRemoteSwiftPackageReference "TOCropViewController" */,
+				B06E4CEA2A8B873E00DF9DAC /* XCRemoteSwiftPackageReference "Alamofire" */,
+				B06E4CED2A8B878600DF9DAC /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				B0A500642A8B8CC900E111AA /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
 			);
 			productRefGroup = 5C508966264E81B8009B66D1 /* Products */;
 			projectDirPath = "";
@@ -408,45 +422,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		26D3C67C86936974C5FD0838 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Fun Facts/Pods-Fun Facts-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Fun Facts/Pods-Fun Facts-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Fun Facts/Pods-Fun Facts-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DA1BFBB591C15FA7F95D6437 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WidExtensionExtension-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		EF4F47A09C06E7AA72E89A80 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -648,7 +623,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Fun Facts/Fun Facts.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = 959YZPX78D;
 				INFOPLIST_FILE = "Fun Facts/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Fun Facts";
@@ -658,7 +633,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.6;
+				MARKETING_VERSION = 2.7;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fact.Fun-Facts";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -677,7 +652,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Fun Facts/Fun Facts.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = 959YZPX78D;
 				INFOPLIST_FILE = "Fun Facts/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Fun Facts";
@@ -687,7 +662,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.6;
+				MARKETING_VERSION = 2.7;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fact.Fun-Facts";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -698,7 +673,6 @@
 		};
 		5C508993264E81FD009B66D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 643C2204BCE7E677F884AC88 /* Pods-WidExtensionExtension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
@@ -723,7 +697,6 @@
 		};
 		5C508994264E81FD009B66D1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 78863B153717DF68C4A747E4 /* Pods-WidExtensionExtension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
@@ -779,6 +752,46 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		B06E4CE42A8B75A800DF9DAC /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		B06E4CE72A8B86D000DF9DAC /* XCRemoteSwiftPackageReference "TOCropViewController" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/TimOliver/TOCropViewController";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		B06E4CEA2A8B873E00DF9DAC /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		B06E4CED2A8B878600DF9DAC /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		B0A500642A8B8CC900E111AA /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
 		B0CE689328D8BE7000C93ED6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -790,6 +803,41 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		B06E4CE52A8B75A800DF9DAC /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B06E4CE42A8B75A800DF9DAC /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		B06E4CE82A8B86D000DF9DAC /* CropViewController */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B06E4CE72A8B86D000DF9DAC /* XCRemoteSwiftPackageReference "TOCropViewController" */;
+			productName = CropViewController;
+		};
+		B06E4CEB2A8B873E00DF9DAC /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B06E4CEA2A8B873E00DF9DAC /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		B06E4CEE2A8B878600DF9DAC /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B06E4CED2A8B878600DF9DAC /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		B0A500602A8B8B0300E111AA /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B06E4CEA2A8B873E00DF9DAC /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		B0A500622A8B8B0900E111AA /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B06E4CED2A8B878600DF9DAC /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		B0A500652A8B8CC900E111AA /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B0A500642A8B8CC900E111AA /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
+		};
 		B0CE689428D8BE7000C93ED6 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B0CE689328D8BE7000C93ED6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
