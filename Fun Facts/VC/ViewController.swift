@@ -10,7 +10,7 @@ import WidgetKit
 import SwiftUI
 import CropViewController
 import TOCropViewController
-import InAppPurchase
+//import InAppPurchase
 
 class ViewController: UIViewController {
     

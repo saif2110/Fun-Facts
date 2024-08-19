@@ -18,17 +18,17 @@ class Welcome: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let LottiV = AnimationView()
-        LottiV.frame = self.welcome.bounds
-        LottiV.backgroundColor = .clear
-        LottiV.animation = Animation.named("welcome")
-        LottiV.contentMode = .scaleAspectFit
-        LottiV.loopMode = .repeat(0)
-        LottiV.play()
-        
-        DispatchQueue.main.async {
-            self.welcome.addSubview(LottiV)
-        }
+//        let LottiV = AnimationView()
+//        LottiV.frame = self.welcome.bounds
+//        LottiV.backgroundColor = .clear
+//        LottiV.animation = Animation.named("welcome")
+//        LottiV.contentMode = .scaleAspectFit
+//        LottiV.loopMode = .repeat(0)
+//        LottiV.play()
+//        
+//        DispatchQueue.main.async {
+//            self.welcome.addSubview(LottiV)
+//        }
         
         self.isModalInPresentation = true
     }

@@ -1,28 +1,24 @@
 PODS:
-  - InAppPurchase (2.8.0)
   - lottie-ios (3.3.0)
   - Purchases (3.14.2):
     - PurchasesCoreSwift (= 3.14.2)
   - PurchasesCoreSwift (3.14.2)
 
 DEPENDENCIES:
-  - InAppPurchase
   - lottie-ios
   - Purchases
 
 SPEC REPOS:
   trunk:
-    - InAppPurchase
     - lottie-ios
     - Purchases
     - PurchasesCoreSwift
 
 SPEC CHECKSUMS:
-  InAppPurchase: 439e4bf7f5eb46b70bd8d46f5f09a882d1031cd5
   lottie-ios: 6ac74dcc09904798f59b18cb3075c089d76be9ae
   Purchases: 5af37054554583f973b0ad0b9653e412bb8649db
   PurchasesCoreSwift: 588d3702282fb96222d7d5e05acd84f37e50a1ce
 
-PODFILE CHECKSUM: 6e83e08ef4f6bdde08119f6da631712277e37baf
+PODFILE CHECKSUM: 488d367b3704eb90e775ca9c6401770dbd65dfc1
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.14.3

@@ -8,7 +8,7 @@
 import UIKit
 import WidgetKit
 import GoogleMobileAds
-import InAppPurchase
+//import InAppPurchase
 import Purchases
 import FirebaseCore
 import SuperwallKit
@@ -28,19 +28,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         GADMobileAds.sharedInstance().start(completionHandler: nil)
-        GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = ["6210b868cd886cacae0f1cd1ed3f41b3"]
+        //GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = ["6210b868cd886cacae0f1cd1ed3f41b3"]
         
-        let iap = InAppPurchase.default
-        iap.addTransactionObserver(fallbackHandler: {_ in
-            // Handle the result of payment added by Store
-            // See also `InAppPurchase#purchase`
-
-            //print("what the hell is this")
-        })
+//        let iap = InAppPurchase.default
+//        iap.addTransactionObserver(fallbackHandler: {_ in
+//            // Handle the result of payment added by Store
+//            // See also `InAppPurchase#purchase`
+//
+//            //print("what the hell is this")
+//        })
       
       Superwall.configure(apiKey: "pk_757c2dcd4ac6e45c223a8ccafc0eab87d2c39862a0d2ef2e")
       Purchases.debugLogsEnabled = false
-      Purchases.configure(withAPIKey: "appl_ozycjglBHBHaaReiTiXorPQszMg")
+      Purchases.configure(withAPIKey: "appl_SfTMeMMoRaJeoYzaYNaXMUJRUlw")
       isSubsActive()
       
       

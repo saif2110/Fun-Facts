@@ -11,7 +11,7 @@ target 'Fun Facts' do
 #pod 'CropViewController'#pod 'CropViewController'
 #pod 'Google-Mobile-Ads-SDK'
 pod 'lottie-ios'
-pod 'InAppPurchase'
+#pod 'InAppPurchase'
 pod 'Purchases'
 end
 

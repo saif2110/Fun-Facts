@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -644,7 +644,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 12;
-				DEVELOPMENT_TEAM = 959YZPX78D;
+				DEVELOPMENT_TEAM = HDFV5Z555L;
 				INFOPLIST_FILE = "Fun Facts/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Fun Facts";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.magazines-and-newspapers";
@@ -673,7 +673,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 12;
-				DEVELOPMENT_TEAM = 959YZPX78D;
+				DEVELOPMENT_TEAM = HDFV5Z555L;
 				INFOPLIST_FILE = "Fun Facts/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Fun Facts";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.magazines-and-newspapers";

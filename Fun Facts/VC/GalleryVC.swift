@@ -8,7 +8,7 @@
 import UIKit
 import Alamofire
 import StoreKit
-import InAppPurchase
+//import InAppPurchase
 import SwiftyJSON
 
 class GalleryVC: UIViewController {
@@ -82,17 +82,17 @@ class GalleryVC: UIViewController {
         }
       }
       
-        let iap = InAppPurchase.default
-        iap.set(shouldAddStorePaymentHandler: { (product) -> Bool in
-            return true
-        }, handler: { (result) in
-            switch result {
-            case .success( _):
-                self.PerchesedComplte()
-            case .failure( _):
-                print("error")
-            }
-        })
+//        let iap = InAppPurchase.default
+//        iap.set(shouldAddStorePaymentHandler: { (product) -> Bool in
+//            return true
+//        }, handler: { (result) in
+//            switch result {
+//            case .success( _):
+//                self.PerchesedComplte()
+//            case .failure( _):
+//                print("error")
+//            }
+//        })
         
         photo.image = UIImage(data: UserDefaults.standard.getshareImage())
         photo.backgroundColor = .black

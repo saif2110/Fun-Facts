@@ -73,9 +73,18 @@ extension UserDefaults{
         set(value, forKey: UserDefaultsKeys.shareImage.rawValue)
     }
     
-    func getshareImage() -> Data{
-        return data(forKey: UserDefaultsKeys.shareImage.rawValue) ?? #imageLiteral(resourceName: "mountain").jpegData(compressionQuality: 1)!
+    func getshareImage() -> Data {
+        if let savedData = data(forKey: UserDefaultsKeys.shareImage.rawValue) {
+            return savedData
+        } else if let image = UIImage(named: "mountain")?.jpegData(compressionQuality: 1) {
+            return image
+        } else {
+            // Handle the case where the image is not found or jpegData conversion fails
+            // You could return some default data or handle the error in a way that suits your app
+            fatalError("Image 'mountain' not found in assets or failed to convert to jpegData.")
+        }
     }
+
     
     
     func timeappOpenSet(value: Int) {

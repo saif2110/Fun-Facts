@@ -1,6 +1,0 @@
-module InAppPurchase {
-  umbrella header "InAppPurchase-umbrella.h"
-
-  export *
-  module * { export * }
-}
