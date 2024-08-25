@@ -38,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            //print("what the hell is this")
 //        })
       
-      Superwall.configure(apiKey: "pk_757c2dcd4ac6e45c223a8ccafc0eab87d2c39862a0d2ef2e")
+      Superwall.configure(apiKey: "pk_f5f5865ae9224bd71346689563965eeb098603950b0f252d")
       Purchases.logLevel = .error
       Purchases.configure(withAPIKey: "appl_SfTMeMMoRaJeoYzaYNaXMUJRUlw")
       isSubsActive()
