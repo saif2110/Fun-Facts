@@ -697,9 +697,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = WidExtensionExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 9;
-				DEVELOPMENT_TEAM = 959YZPX78D;
+				DEVELOPMENT_TEAM = HDFV5Z555L;
 				INFOPLIST_FILE = WidExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -707,8 +708,9 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 2.6;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.fact.Fun-Facts.WidExtension";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fact.Fun-Facts.WidExtension2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -723,7 +725,7 @@
 				CODE_SIGN_ENTITLEMENTS = WidExtensionExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 9;
-				DEVELOPMENT_TEAM = 959YZPX78D;
+				DEVELOPMENT_TEAM = HDFV5Z555L;
 				INFOPLIST_FILE = WidExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -731,7 +733,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 2.6;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.fact.Fun-Facts.WidExtension";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fact.Fun-Facts.WidExtension2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
