@@ -46,8 +46,8 @@
 		5C95ADE4264FC2FF001DE4E9 /* left.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C95ADE3264FC2FF001DE4E9 /* left.json */; };
 		5C95ADF0264FE95B001DE4E9 /* pro.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C95ADEF264FE95B001DE4E9 /* pro.json */; };
 		5C97853A26503E5800BFD733 /* 180.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C97853926503E5800BFD733 /* 180.png */; };
+		6AC3E9162C8C88A4000DE1DF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6AC3E9152C8C88A4000DE1DF /* GoogleService-Info.plist */; };
 		6B1A953A57D5B28933290F2C /* libPods-Fun Facts.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EB999259C334C034859C70C /* libPods-Fun Facts.a */; };
-		B003788428FAF22F004ED2E1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B003788328FAF22F004ED2E1 /* GoogleService-Info.plist */; };
 		B010B61A2889D19C00FF7E3B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B010B6192889D19C00FF7E3B /* StoreKit.framework */; };
 		B06E4CE62A8B75A800DF9DAC /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B06E4CE52A8B75A800DF9DAC /* Kingfisher */; };
 		B06E4CE92A8B86D000DF9DAC /* CropViewController in Frameworks */ = {isa = PBXBuildFile; productRef = B06E4CE82A8B86D000DF9DAC /* CropViewController */; };
@@ -132,7 +132,7 @@
 		5C95ADE3264FC2FF001DE4E9 /* left.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = left.json; sourceTree = "<group>"; };
 		5C95ADEF264FE95B001DE4E9 /* pro.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pro.json; sourceTree = "<group>"; };
 		5C97853926503E5800BFD733 /* 180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 180.png; sourceTree = "<group>"; };
-		B003788328FAF22F004ED2E1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6AC3E9152C8C88A4000DE1DF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B010B6192889D19C00FF7E3B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		B08FD14A28FAF92A0007D991 /* InAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppViewController.swift; sourceTree = "<group>"; };
 		B08FD14B28FAF92A0007D991 /* InAppViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InAppViewController.xib; sourceTree = "<group>"; };
@@ -194,10 +194,10 @@
 		5C508967264E81B8009B66D1 /* Fun Facts */ = {
 			isa = PBXGroup;
 			children = (
-				B003788328FAF22F004ED2E1 /* GoogleService-Info.plist */,
 				B010B61428899EC000FF7E3B /* InApp */,
 				5C39849026503483006AEC07 /* Fun Facts.entitlements */,
 				5C95ADEF264FE95B001DE4E9 /* pro.json */,
+				6AC3E9152C8C88A4000DE1DF /* GoogleService-Info.plist */,
 				5C95ADE3264FC2FF001DE4E9 /* left.json */,
 				5C5089D1264EB87D009B66D1 /* welcome.json */,
 				5C5089A1264E8AA8009B66D1 /* VC */,
@@ -411,7 +411,6 @@
 			files = (
 				5C5089CF264E8E26009B66D1 /* Montserrat-Bold.ttf in Resources */,
 				5C5089B8264E8AA8009B66D1 /* Welcome.xib in Resources */,
-				B003788428FAF22F004ED2E1 /* GoogleService-Info.plist in Resources */,
 				5C5089BF264E8AC6009B66D1 /* LaunchScreen.storyboard in Resources */,
 				5C95ADF0264FE95B001DE4E9 /* pro.json in Resources */,
 				5C5089CD264E8C2C009B66D1 /* selectType.xib in Resources */,
@@ -419,6 +418,7 @@
 				5C5089B6264E8AA8009B66D1 /* selectFontVC.xib in Resources */,
 				5C5089B7264E8AA8009B66D1 /* swipeViewVC.xib in Resources */,
 				5C97853A26503E5800BFD733 /* 180.png in Resources */,
+				6AC3E9162C8C88A4000DE1DF /* GoogleService-Info.plist in Resources */,
 				5C95ADE4264FC2FF001DE4E9 /* left.json in Resources */,
 				5C5089C3264E8B28009B66D1 /* Assets.xcassets in Resources */,
 				5C5089D2264EB87D009B66D1 /* welcome.json in Resources */,
