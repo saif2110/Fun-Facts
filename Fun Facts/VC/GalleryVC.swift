@@ -144,7 +144,7 @@ class GalleryVC: UIViewController {
         leftswiped = 0
         arrayofQuotes.removeAll()
        // startIndicator(selfo: self, UIView: self.view)
-        let type = UserDefaults(suiteName: "group.Widinfo")!.object(forKey: "type") as? Array ?? ["random"]
+        let type = UserDefaults(suiteName: "group.Widinfo2")!.object(forKey: "type") as? Array ?? ["random"]
         
         postWithParameter(Url: "facts.php", parameters: ["type":type,"by":true]) { (JSON, Err) in
             
@@ -180,7 +180,7 @@ class GalleryVC: UIViewController {
     func PerchesedComplte(){
         UserDefaults.standard.setValue(true , forKeyPath: "pro")
         UserDefaults(suiteName:
-                        "group.Widinfo")!.set(true, forKey: "pro")
+                        "group.Widinfo2")!.set(true, forKey: "pro")
         self.present(myAlt(titel:"Congratulations !",message:"You are a pro member now. Enjoy seamless experience without the Ads."), animated: true, completion: nil)
     }
     

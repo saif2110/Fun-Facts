@@ -50,9 +50,9 @@ class ViewController: UIViewController {
         
         
         if UserDefaults.standard.isImageset(){
-            let opacity = UserDefaults(suiteName: "group.Widinfo")!.object(forKey: "opacity") as? Double ?? 1
+            let opacity = UserDefaults(suiteName: "group.Widinfo2")!.object(forKey: "opacity") as? Double ?? 1
             
-            let bgImage = UserDefaults(suiteName: "group.Widinfo")!.object(forKey: "bgImage") as? Data ?? Data()
+            let bgImage = UserDefaults(suiteName: "group.Widinfo2")!.object(forKey: "bgImage") as? Data ?? Data()
             
             WhenImageisSet(image: UIImage(data: bgImage)!, opacity: Float(opacity))
         }else{
@@ -97,9 +97,9 @@ class ViewController: UIViewController {
     
     @objc func themeSelect()  {
         DispatchQueue.main.async {
-            let opacity = UserDefaults(suiteName: "group.Widinfo")!.object(forKey: "opacity") as? Double ?? 1
+            let opacity = UserDefaults(suiteName: "group.Widinfo2")!.object(forKey: "opacity") as? Double ?? 1
             
-            let bgImage = UserDefaults(suiteName: "group.Widinfo")!.object(forKey: "bgImage") as? Data ?? Data()
+            let bgImage = UserDefaults(suiteName: "group.Widinfo2")!.object(forKey: "bgImage") as? Data ?? Data()
             
             self.WhenImageisSet(image: UIImage(data: bgImage)!, opacity: Float(opacity))
             self.quoteText.font = UIFont(name: UserDefaults.standard.getfont(), size: self.textSize)
@@ -190,7 +190,7 @@ extension ViewController: UIColorPickerViewControllerDelegate {
             self.quoteText.textColor = viewController.selectedColor
             
             UserDefaults(suiteName:
-                            "group.Widinfo")!.set(viewController.selectedColor.htmlRGBaColor, forKey: "textColor")
+                            "group.Widinfo2")!.set(viewController.selectedColor.htmlRGBaColor, forKey: "textColor")
         }
     }
     
@@ -198,15 +198,15 @@ extension ViewController: UIColorPickerViewControllerDelegate {
     func WhenImageisSet(image:UIImage,opacity:Float){
         
         UserDefaults(suiteName:
-                        "group.Widinfo")!.set(image.jpegData(compressionQuality:1), forKey: "bgImage")
+                        "group.Widinfo2")!.set(image.jpegData(compressionQuality:1), forKey: "bgImage")
         
         UserDefaults(suiteName:
-                        "group.Widinfo")!.set(opacity, forKey: "opacity")
+                        "group.Widinfo2")!.set(opacity, forKey: "opacity")
         
         UserDefaults.standard.setisImageset(value: true)
         
         UserDefaults(suiteName:
-                        "group.Widinfo")!.set(UIColor.black.htmlRGBaColor, forKey: "bgColor")
+                        "group.Widinfo2")!.set(UIColor.black.htmlRGBaColor, forKey: "bgColor")
         
         mediumWidget.backgroundColor = .black
         imageV.image = image
@@ -223,12 +223,12 @@ extension ViewController: UIColorPickerViewControllerDelegate {
         UserDefaults.standard.setbgColor(value: Color.htmlRGBaColor)
         UserDefaults.standard.setisImageset(value: false)
         UserDefaults(suiteName:
-                        "group.Widinfo")!.set(Color.htmlRGBaColor, forKey: "bgColor")
+                        "group.Widinfo2")!.set(Color.htmlRGBaColor, forKey: "bgColor")
         
         UserDefaults(suiteName:
-                        "group.Widinfo")!.set(UIImage(imageLiteralResourceName: "null").pngData(), forKey: "bgImage")
+                        "group.Widinfo2")!.set(UIImage(imageLiteralResourceName: "null").pngData(), forKey: "bgImage")
         UserDefaults(suiteName:
-                        "group.Widinfo")!.set(0, forKey: "opacity")
+                        "group.Widinfo2")!.set(0, forKey: "opacity")
         
         imageV.image = #imageLiteral(resourceName: "null")
         imageV.layer.backgroundColor = .none

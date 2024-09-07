@@ -33,7 +33,7 @@ class selectFontVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         UserDefaults(suiteName:
-                        "group.Widinfo")!.set(allFonts[indexPath.row], forKey: "font")
+                        "group.Widinfo2")!.set(allFonts[indexPath.row], forKey: "font")
         
         UserDefaults.standard.setfont(value: allFonts[indexPath.row])
         

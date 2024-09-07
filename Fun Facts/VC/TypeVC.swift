@@ -137,7 +137,7 @@ class TypeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
     @IBAction func getStarted(_ sender: Any) {
         
         UserDefaults(suiteName:
-                        "group.Widinfo")!.set(type, forKey: "type")
+                        "group.Widinfo2")!.set(type, forKey: "type")
         
         dismiss(animated: false) {
             

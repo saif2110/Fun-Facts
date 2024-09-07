@@ -65,13 +65,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
               
             UserDefaults.standard.setValue(true , forKeyPath: "pro")
             UserDefaults(suiteName:
-                            "group.Widinfo")!.set(true, forKey: "pro")
+                            "group.Widinfo2")!.set(true, forKey: "pro")
               
           }else{
               
             UserDefaults.standard.setValue(false , forKeyPath: "pro")
             UserDefaults(suiteName:
-                            "group.Widinfo")!.set(false, forKey: "pro")
+                            "group.Widinfo2")!.set(false, forKey: "pro")
 
           }
       }

@@ -22,22 +22,22 @@ struct Provider: IntentTimelineProvider {
     func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         var entries: [SimpleEntry] = []
         
-        let font = UserDefaults(suiteName: "group.Widinfo")!.object(forKey: "font") as? String ?? "Charter-Bold"
+        let font = UserDefaults(suiteName: "group.Widinfo2")!.object(forKey: "font") as? String ?? "Charter-Bold"
         
-        let bgColor = UserDefaults(suiteName: "group.Widinfo")!.object(forKey: "bgColor") as? String ?? "#F4F4F4F4"
+        let bgColor = UserDefaults(suiteName: "group.Widinfo2")!.object(forKey: "bgColor") as? String ?? "#F4F4F4F4"
         
-        let textColor = UserDefaults(suiteName: "group.Widinfo")!.object(forKey: "textColor") as? String ?? "#000000ff"
+        let textColor = UserDefaults(suiteName: "group.Widinfo2")!.object(forKey: "textColor") as? String ?? "#000000ff"
         
-        let bgImage = UserDefaults(suiteName: "group.Widinfo")!.object(forKey: "bgImage") as? Data ?? Data()
+        let bgImage = UserDefaults(suiteName: "group.Widinfo2")!.object(forKey: "bgImage") as? Data ?? Data()
         //let dataAd = #imageLiteral(resourceName: "ad").pngData()
         
         
-        let opacity = UserDefaults(suiteName: "group.Widinfo")!.object(forKey: "opacity") as? Double ?? 1
+        let opacity = UserDefaults(suiteName: "group.Widinfo2")!.object(forKey: "opacity") as? Double ?? 1
 
         
-        let type = UserDefaults(suiteName: "group.Widinfo")!.object(forKey: "type") as? Array ?? ["random"]
+        let type = UserDefaults(suiteName: "group.Widinfo2")!.object(forKey: "type") as? Array ?? ["random"]
 
-        let isPro = UserDefaults(suiteName: "group.Widinfo")!.object(forKey: "pro") as? Bool ?? false
+        let isPro = UserDefaults(suiteName: "group.Widinfo2")!.object(forKey: "pro") as? Bool ?? false
         
         var arrayofQuotes = [String]()
         
@@ -125,7 +125,7 @@ struct WidExtensionEntryView : View {
                 
             }else{
                 
-                let bgImage = UserDefaults(suiteName: "group.Widinfo")!.object(forKey: "bgImage") as? Data ?? Data()
+                let bgImage = UserDefaults(suiteName: "group.Widinfo2")!.object(forKey: "bgImage") as? Data ?? Data()
                 
                 Image(uiImage: UIImage(data: bgImage)!)
                     .resizable()

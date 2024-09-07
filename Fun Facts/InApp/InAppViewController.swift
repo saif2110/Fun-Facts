@@ -151,7 +151,7 @@ class InAppViewController: UIViewController {
     
     UserDefaults.standard.setValue(true , forKeyPath: "pro")
     UserDefaults(suiteName:
-                  "group.Widinfo")!.set(true, forKey: "pro")
+                  "group.Widinfo2")!.set(true, forKey: "pro")
     
     self.present(myAlt(titel:"Congratulations !",message:"You are a pro member now. Enjoy seamless experience with all features unlock."), animated: true, completion: nil)
   }

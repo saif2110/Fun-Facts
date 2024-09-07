@@ -90,14 +90,14 @@ extension ThemesVC:UITableViewDelegate,UITableViewDataSource {
         WhenImageisSet(image: cell.Bgimage.image!, opacity: Float(opacity[indexPath.row])!)
 
         UserDefaults(suiteName:
-                        "group.Widinfo")!.set(font[indexPath.row], forKey: "font")
+                        "group.Widinfo2")!.set(font[indexPath.row], forKey: "font")
 
         UserDefaults.standard.setfont(value: font[indexPath.row])
 
         UserDefaults.standard.settextColor(value:textColor[indexPath.row])
 
         UserDefaults(suiteName:
-                        "group.Widinfo")!.set(textColor[indexPath.row], forKey: "textColor")
+                        "group.Widinfo2")!.set(textColor[indexPath.row], forKey: "textColor")
 
         NotificationCenter.default.post(name: NSNotification.Name("fontChange"), object: nil)
 
@@ -110,14 +110,14 @@ extension ThemesVC:UITableViewDelegate,UITableViewDataSource {
             WhenImageisSet(image: cell.Bgimage.image!, opacity: Float(opacity[indexPath.row])!)
             
             UserDefaults(suiteName:
-                            "group.Widinfo")!.set(font[indexPath.row], forKey: "font")
+                            "group.Widinfo2")!.set(font[indexPath.row], forKey: "font")
             
             UserDefaults.standard.setfont(value: font[indexPath.row])
             
             UserDefaults.standard.settextColor(value:textColor[indexPath.row])
             
             UserDefaults(suiteName:
-                            "group.Widinfo")!.set(textColor[indexPath.row], forKey: "textColor")
+                            "group.Widinfo2")!.set(textColor[indexPath.row], forKey: "textColor")
             
             NotificationCenter.default.post(name: NSNotification.Name("fontChange"), object: nil)
             
@@ -133,15 +133,15 @@ extension ThemesVC:UITableViewDelegate,UITableViewDataSource {
     func WhenImageisSet(image:UIImage,opacity:Float){
         
         UserDefaults(suiteName:
-                        "group.Widinfo")!.set(image.jpegData(compressionQuality: 1), forKey: "bgImage")
+                        "group.Widinfo2")!.set(image.jpegData(compressionQuality: 1), forKey: "bgImage")
         
         UserDefaults(suiteName:
-                        "group.Widinfo")!.set(opacity, forKey: "opacity")
+                        "group.Widinfo2")!.set(opacity, forKey: "opacity")
         
         UserDefaults.standard.setisImageset(value: true)
         
         UserDefaults(suiteName:
-                        "group.Widinfo")!.set(UIColor.black.htmlRGBaColor, forKey: "bgColor")
+                        "group.Widinfo2")!.set(UIColor.black.htmlRGBaColor, forKey: "bgColor")
         
         dismiss(animated: true, completion: nil)
     }
