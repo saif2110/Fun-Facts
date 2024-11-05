@@ -81,7 +81,8 @@ extension UserDefaults{
         } else {
             // Handle the case where the image is not found or jpegData conversion fails
             // You could return some default data or handle the error in a way that suits your app
-            fatalError("Image 'mountain' not found in assets or failed to convert to jpegData.")
+            //fatalError("Image 'mountain' not found in assets or failed to convert to jpegData.")
+            return Data()
         }
     }
 

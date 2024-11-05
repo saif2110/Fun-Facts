@@ -10,7 +10,7 @@ import GoogleMobileAds
 import AppTrackingTransparency
 
 //let testIntrest = "ca-app-pub-3940256099942544/4411468910"  //test
-let testIntrest = "ca-app-pub-2710347124980493/6974272506" //Mine
+let testIntrest = "ca-app-pub-3647482139657715/7382092847" //Mine
 
 private var interstitial: GADInterstitialAd?
 
